@@ -1,9 +1,10 @@
 job('NodeJS example') {
 	scm {
-		git('git@github.com:acruzr/service-web-app.git', 'ssh') { node -> // is hundson.plugins.git.GitSCM
-			node / gitConfigName('acruzr')
-			node / gitConfigEmail('acruzr135@gmail.com')
-			credentials('ssh_jenkins_ID')
+		git() { 
+			remote {
+				github('acruzr/infrastructure-as-code', 'ssh')
+				credentials('ssh_jenkins_ID')
+			}
 		}
 	}
 	wrappers {
