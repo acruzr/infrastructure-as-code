@@ -16,6 +16,7 @@ job('service-web-app Docker') {
 			forceTag(false)
 			createFingerprints(false)
 			skipDecorate()
+			dockerfileDirectory('build/Dockerfile')
 		}
 	}
 }
