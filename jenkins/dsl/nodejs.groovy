@@ -2,8 +2,9 @@ job('NodeJS example') {
 	scm {
 		git() { 
 			remote {
-				github('acruzr/infrastructure-as-code', 'ssh')
+				github('acruzr/service-web-app', 'ssh')
 				credentials('ssh_jenkins_ID')
+				branches('master')
 			}
 		}
 	}
